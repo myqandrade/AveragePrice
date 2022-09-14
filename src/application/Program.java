@@ -18,20 +18,19 @@ public class Program {
         Product[] products = new Product[quantity];
         double sum = 0.0;
 
-        for(int i = 0; i < quantity; i++){
+        for(int i = 0; i < products.length; i++){
             System.out.print("Enter product name: ");
             String name = sc.next();
             System.out.print("Enter product price: ");
             double price = sc.nextDouble();
-            Product product = new Product(name, price);
-            products[i] = product;
-            sum += product.getPrice();
+            products[i] = new Product(name, price);
+            sum += products[i].getPrice();
         }
 
         double averagePrice = sum / quantity;
 
         System.out.println();
-        System.out.printf("AVERAGE PRICE: %.2f%n", averagePrice);
+        System.out.printf("AVERAGE PRICE = %.2f%n", averagePrice);
 
         sc.close();
     }
