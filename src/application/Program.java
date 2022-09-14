@@ -18,10 +18,9 @@ public class Program {
         Product[] products = new Product[quantity];
         double sum = 0.0;
 
-        System.out.print("Enter product name: ");
-        String name = sc.next();
-
         for(int i = 0; i < quantity; i++){
+            System.out.print("Enter product name: ");
+            String name = sc.next();
             System.out.print("Enter product price: ");
             double price = sc.nextDouble();
             Product product = new Product(name, price);
