@@ -27,7 +27,7 @@ public class Program {
             sum += products[i].getPrice();
         }
 
-        double averagePrice = sum / quantity;
+        double averagePrice = sum / products.length;
 
         System.out.println();
         System.out.printf("AVERAGE PRICE = %.2f%n", averagePrice);
